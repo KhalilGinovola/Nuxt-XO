@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: GillSans;
+  src: url("./assets/fonts/Gill-Sans.otf");
+  font-weight: 500;
+}
+
+:root {
+  --primary-color: #06716a;
+  --color-primary: #06716a;
+  --color-primary-1: rgba(69, 194, 185, 0.5);
+
+  --color-secondary: #3b3791;
+
+  --bg-header: #fff9eb;
+  --bg-footer: #fffcf6;
+
+  --font-en: "GillSans", sans-serif;
+  --font-ar: "GillSans", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.v-application,
+body,
+html,
+input {
+  font-family: var(--font-en) !important;
+}
+
+/* container */
+.container {
+  &.fluid {
+    max-width: 100% !important;
+  }
+
+  @media (min-width: 640px) {
+    max-width: 610px !important;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    max-width: 720px !important;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 1024px) {
+    max-width: 990px !important;
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (min-width: 1280px) {
+    max-width: 1200px !important;
+  }
+
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media (min-width: 1536px) {
+    max-width: 1400px !important;
+  }
+}
+
+/* nuxt link */
+.nuxt-link-exact-active.nuxt-link-active {
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+}
+
+/* custom code */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
